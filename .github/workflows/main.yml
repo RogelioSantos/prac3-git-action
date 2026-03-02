@@ -20,10 +20,10 @@ jobs:
           distribution: 'temurin'
 
       - name: Compilar con Maven
-        run: mvn clean compile
+        run: mvn clean compile -f demo/pom.xml
 
       - name: Ejecutar tests
-        run: mvn test
+        run: mvn test -f demo/pom.xml
 
       - name: Build JAR
-        run: mvn package
+        run: mvn package -f demo/pom.xml
